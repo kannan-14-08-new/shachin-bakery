@@ -71,7 +71,7 @@ const Images: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-8 px-5 py-10">
-      <h1 className="text-pink-600 font-serif text-center md:text-7xl text-4xl">
+      <h1 className="text-pink-600 text-center md:text-7xl text-4xl">
         Cake Collections 🍰
       </h1>
 

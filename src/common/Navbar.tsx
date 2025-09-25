@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -25,9 +26,15 @@ export default function Navbar() {
         {/* Logo/Brand Name */}
         <Link
           href="/"
-          className="text-2xl text-pink-600 transition duration-300 hover:text-pink-700 tracking-wider"
+          className="text-2xl text-pink-600 transition duration-300 hover:text-pink-700 tracking-wider flex items-center"
         >
-          Shachin Bakery
+          <Image
+            src="/cake-images/logo-2.png"
+            alt="logo"
+            width={80}
+            height={40}
+          />
+          <span>Shachin Bakery</span>
         </Link>
 
         {/* Desktop Navigation Links (Hidden on mobile) */}

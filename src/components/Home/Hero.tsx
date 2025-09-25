@@ -99,7 +99,7 @@ export default function Hero() {
 
             {/* Overlay and Title */}
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center">
-              <h2 className="text-4xl md:text-6xl font-serif text-white mb-4 drop-shadow-lg animate-fadeInUp">
+              <h2 className="text-4xl md:text-6xl  text-white mb-4 drop-shadow-lg animate-fadeInUp">
                 {image.title}
               </h2>
               <p className="text-xl text-pink-100 tracking-wider animate-fadeIn delay-300">

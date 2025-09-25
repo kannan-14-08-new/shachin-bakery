@@ -20,6 +20,26 @@
   }
 }
 
+body {
+  font-family: var(--font-new);
+}
+
+/*
+  Add this to your global stylesheet (e.g., globals.css)
+  If you are using Font Awesome, it's typically linked via a <link> tag
+  in your layout or installed via npm.
+*/
+
+/* Example styles for the icons if you use simple SVGs or a font library */
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.15) rotate(5deg);
+  color: #c9a47d; /* A soft accent color on hover */
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }
