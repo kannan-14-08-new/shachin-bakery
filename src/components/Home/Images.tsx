@@ -75,7 +75,7 @@ const Images: React.FC = () => {
         Cake Collections 🍰
       </h1>
 
-      <div className="grid grid-cols-5 grid-rows-5 gap-4 h-[700px] md:h-[900px] w-full mx-auto">
+      <div className="grid md:grid-cols-5 md:grid-rows-5 md:gap-4 h-[300vh] gap-4 md:h-[900px] w-full mx-auto">
         {cakeImages.map((image, index) => (
           <div
             key={index}

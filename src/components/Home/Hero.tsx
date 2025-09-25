@@ -99,7 +99,7 @@ export default function Hero() {
 
             {/* Overlay and Title */}
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center">
-              <h2 className="text-4xl md:text-6xl  text-white mb-4 drop-shadow-lg animate-fadeInUp">
+              <h2 className="text-4xl md:text-6xl text-white mb-4 drop-shadow-lg animate-fadeInUp">
                 {image.title}
               </h2>
               <p className="text-xl text-pink-100 tracking-wider animate-fadeIn delay-300">
@@ -111,9 +111,10 @@ export default function Hero() {
       </div>
 
       {/* --- 2. X-Scroll Navigation Buttons --- */}
+
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 p-3 bg-pink-600/70 text-white rounded-full hover:bg-pink-700 transition duration-300 z-10"
+        className="hidden md:flex absolute top-1/2 left-4 transform -translate-y-1/2 p-3 bg-pink-600/70 text-white rounded-full hover:bg-pink-700 transition duration-300 z-10"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -121,7 +122,7 @@ export default function Hero() {
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 p-3 bg-pink-600/70 text-white rounded-full hover:bg-pink-700 transition duration-300 z-10"
+        className="hidden md:flex absolute top-1/2 right-4 transform -translate-y-1/2 p-3 bg-pink-600/70 text-white rounded-full hover:bg-pink-700 transition duration-300 z-10"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

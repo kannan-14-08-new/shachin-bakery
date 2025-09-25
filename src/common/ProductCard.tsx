@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       {/* Product Image */}
       <Link href={`/${formatToHyphenated(title)}`}>
-        <div className="relative w-full h-[60vh] overflow-hidden">
+        <div className="relative w-full md:h-[60vh] overflow-hidden">
           <Image
             src={imageSrc}
             alt={title}

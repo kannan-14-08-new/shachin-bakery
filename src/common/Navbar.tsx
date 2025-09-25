@@ -21,7 +21,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="shadow-lg bg-white m-5 rounded-full">
+    <header className="shadow-lg bg-white m-5 rounded-[40px]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo/Brand Name */}
         <Link

@@ -2,47 +2,47 @@ export const cakeImages = [
   {
     src: "/cake-images/IMG-20250925-WA0002.jpg",
     alt: "Vanilla Cake",
-    className: "col-span-2 row-span-2",
+    className: "md:col-span-2 md:row-span-2",
   },
   {
     src: "/cake-images/IMG-20250925-WA0026.jpg",
     alt: "Chocolate Cake",
-    className: "col-span-2 row-span-2 col-start-3",
+    className: "md:col-span-2 md:row-span-2 md:col-start-3",
   },
   {
     src: "/cake-images/IMG-20250925-WA0045.jpg",
     alt: "Red Velvet Cake",
-    className: "row-span-2 col-start-5",
+    className: "md:row-span-2 md:col-start-5",
   },
   {
     src: "/cake-images/IMG-20250925-WA0024.jpg",
     alt: "Caramel Cake",
-    className: "row-span-2 row-start-3",
+    className: "md:row-span-2 md:row-start-3",
   },
   {
     src: "/cake-images/IMG-20250925-WA0035.jpg",
     alt: "Lemon Cake",
-    className: "col-span-2 row-span-2 row-start-3",
+    className: "md:col-span-2 md:row-span-2 md:row-start-3",
   },
   {
     src: "/cake-images/IMG-20250925-WA0050.jpg",
     alt: "Strawberry Cake",
-    className: "col-span-2 row-span-2 col-start-4 row-start-3",
+    className: "md:col-span-2 md:row-span-2 md:col-start-4 md:row-start-3",
   },
   {
     src: "/cake-images/IMG-20250925-WA0053.jpg",
     alt: "Mocha Cake",
-    className: "col-span-2 row-start-5",
+    className: "md:col-span-2 md:row-start-5",
   },
   {
     src: "/cake-images/IMG-20250925-WA0055.jpg",
     alt: "Blueberry Cake",
-    className: "col-start-3 row-start-5",
+    className: "md:col-start-3 md:row-start-5",
   },
   {
     src: "/cake-images/IMG-20250925-WA0008.jpg",
     alt: "Pistachio Cake",
-    className: "col-span-2 col-start-4 row-start-5",
+    className: "md:col-span-2 md:col-start-4 md:row-start-5",
   },
 ];
  
