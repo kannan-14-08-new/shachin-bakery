@@ -20,14 +20,14 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="shadow-lg bg-white sticky top-0 z-50 m-5 rounded-full">
+    <header className="shadow-lg bg-white m-5 rounded-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
         {/* Logo/Brand Name */}
         <Link
           href="/"
           className="text-2xl text-pink-600 transition duration-300 hover:text-pink-700 tracking-wider"
         >
-          Sweet Delights
+          Shachin Bakery
         </Link>
 
         {/* Desktop Navigation Links (Hidden on mobile) */}

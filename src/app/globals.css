@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* styles/globals.css */
-
-/* ... your other Tailwind directives and custom fonts ... */
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
