@@ -26,7 +26,7 @@ const images = [
   },
 ];
 
-const INTERVAL_TIME = 100000; // 5 seconds
+const INTERVAL_TIME = 5000;
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,11 +43,6 @@ export default function Hero() {
     );
   }, []);
 
-  const goToSlide = useCallback((index: number) => {
-    setCurrentIndex(index);
-    resetInterval();
-  }, []);
-
   // --- Interval Management ---
   const startInterval = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -58,6 +53,14 @@ export default function Hero() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     startInterval();
   }, [startInterval]);
+
+  const goToSlide = useCallback(
+    (index: number) => {
+      setCurrentIndex(index);
+      resetInterval();
+    },
+    [resetInterval]
+  );
 
   useEffect(() => {
     startInterval();
