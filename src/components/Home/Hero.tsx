@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Recommended icon library for Next/React
 
 // Define your cake images here
@@ -32,51 +32,44 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // --- Core Navigation Logic ---
-  const nextSlide = () => {
+  // --- Navigation Logic ---
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-  };
+  }, []);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentIndex(index);
     resetInterval();
-  };
+  }, []);
 
-  // --- Auto-Scroll Interval Management ---
-  const startInterval = () => {
-    // Clear any existing interval before starting a new one
+  // --- Interval Management ---
+  const startInterval = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
-
     intervalRef.current = setInterval(nextSlide, INTERVAL_TIME);
-  };
+  }, [nextSlide]);
 
-  const resetInterval = () => {
-    // 1. Clear the current timer
+  const resetInterval = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
-    // 2. Restart the timer
     startInterval();
-  };
+  }, [startInterval]);
 
-  // 1. Initial Start and Cleanup on Mount/Unmount
   useEffect(() => {
     startInterval();
-
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, []);
+  }, [startInterval]);
 
-  // --- Touch/Mouse Interaction Handlers ---
-  const handleInteraction = () => {
-    // This function is called on mouseenter, touchstart, or button click
+  // --- Interaction Handler ---
+  const handleInteraction = useCallback(() => {
     resetInterval();
-  };
+  }, [resetInterval]);
 
   return (
     <div
